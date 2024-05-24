@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+h1{font-family: 'Nunito', sans-serif;}
+
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(43, 43, 43);
+    font-style: normal;
+    font-weight: 400;}
+h3{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(43, 43, 43);
+    font-style: normal;
+    font-weight: 400;}
+h5{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(43, 43, 43);
+    font-style: normal;
+    font-weight: 400;}
+p{
+  font-family: 'Montserrat', sans-serif;
+    color: rgb(43, 43, 43);
+    font-style: normal;
+    font-weight: 100;}
+
+
+
+body {
+    font-family: 'Montserrat';
+    color: #000000;
+    ;background:  #D9D9D8;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;}
+  
+  
+  
+  
+  a {
+    color: #000000;
+    text-decoration:none; /* Change this to the desired color */
+  }
+  
+
+
+
+
+
+
+
+a:link {
+    color: #000000;
+  }
+  
+  
+  a:visited {
+    color: #000000;
+  }
+  
+  
+  a:hover {
+    color: #E2F568;
+  }
+  
+  
+  a:active {
+    color: #E2F568;
+  }
+  
+  
+  
+  nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 8vh;
+      background-color:  #f8f8f8;
+      ;;
+      font-family: 'Montserrat', sans-serif;
+  }
+  
+  
+  .nav-logo {
+      color: #E2F568;;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+    font-size: 1.25rem;
+  }
+  
+  
+  .nav-links {
+      display: flex;
+      justify-content: space-around;
+      width: 45%;
+  }
+  
+  
+  .nav-links li {
+      list-style: none;
+  }
+  
+  
+  .nav-links a {
+      color:  #000000;
+      text-decoration: none;
+      letter-spacing: 3px;
+      font-weight: bold;
+      font-size: 14px;
+  }
+  
+  
+  .burger {
+      display: none;
+      cursor: pointer;
+  }
+  
+  
+  .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: #000000;
+      margin: 5px;
+      transition: all 0.3s ease;
+  }
+  
+  
+  @media screen and (max-width: 1024px) {
+     .nav-links {
+          width: 60%;
+      }
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+      body {
+          overflow-x: hidden;
+      }
+     .nav-links {
+          position: absolute;
+          right: 0px;
+          height: 92vh;
+          top: 8vh;
+          background-color: #ffffff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 50%;
+          transform: translateX(100%);
+          transition: transform 0.5s ease-in;
+      }
+     .burger {
+          display: block;
+      }
+  }
+  
+  
+  .nav-active {
+      transform: translateX(0%);
+  }
+  
+  
+  @media (max-width: 600px) {
+      .nav-logo {
+         text-align: center;
+         margin: 0 auto;
+       }
+     }
+     .about-container {
+        max-width: 800px;
+        margin: 40px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      
+      .about-text {
+        flex-basis: 60%;
+        padding: 20px;
+      }
+      
+      
+      .about-image {
+        flex-basis: 40%;
+        padding: 20px;
+      }
+      
+      
+      .about-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+      }
+      
+      
+      /* Medios queries para dispositivos móviles */
+      @media screen and (max-width: 767px) {
+        .about-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      
+      
+        .about-text,
+        .about-image {
+          flex-basis: 100%;
+        }
+      }
+      
+      
+      /* Medios queries para tabletas */
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .about-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      
+      
+        .about-text,
+        .about-image {
+          flex-basis: 100%;
+        }
+      }
+      
+  
