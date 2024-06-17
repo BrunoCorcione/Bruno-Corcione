@@ -1,16 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Navbar*/
+header {
+    background-color: #ffffff;
+    padding: 30px 0;
+}
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
 
+nav a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+}
+
+a:hover {
+    color: rgba(247, 237, 129, 0.8);
+  }
+
+/* FONT*/
 
 h1{font-family: 'Nunito', sans-serif;}
 
 
 h2{
   font-family: 'Montserrat', sans-serif;
-  color: rgb(43, 43, 43);
+  color: rgb(0, 0, 0);
     font-style: normal;
     font-weight: 400;}
 h3{
@@ -34,199 +60,145 @@ p{
 body {
     font-family: 'Montserrat';
     color: #000000;
-    ;background:  #D9D9D8;
-    padding: 0;
-    margin: 0;
+    ;background:  #ffffff;
+    margin: 0 10px;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;}
   
-  
-  
-  
-  a {
-    color: #000000;
-    text-decoration:none; /* Change this to the desired color */
+
+/* HOME / WORKS */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
   }
   
+  .grid-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s; /* Add transition for scale up effect */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(137, 197, 243, 0.738);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none; /* Cambia a none */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.3s; /* Add transition for background color change */
+  }
+  
+  .grid-item:hover img {
+    transform: scale(1.05); /* Scale up on hover, solo en la imagen */
+  }
+  
+  .grid-item:hover .overlay {
+    display: flex;
+    background-color: rgba(247, 237, 129, 0.8); /* Change background color on hover */
+  }
+  
+  .overlay span {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s; /* Add transition for text animation */
+  }
+  
+  .grid-item:hover .overlay span {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 
-
-
-
-
-
-
-a:link {
-    color: #000000;
+/* ABOUT HTML */
+  .about-container {
+    max-width: 800px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   
-  a:visited {
-    color: #000000;
+  .about-text {
+    flex-basis: 60%;
+    padding: 20px;
   }
   
   
-  a:hover {
-    color: #E2F568;
+  .about-image {
+    flex-basis: 40%;
+    padding: 20px;
   }
   
   
-  a:active {
-    color: #E2F568;
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
   }
   
   
-  
-  nav {
-      display: flex;
-      justify-content: space-around;
+  /* Medios queries para dispositivos móviles */
+  @media screen and (max-width: 767px) {
+    .about-container {
+      flex-direction: column;
       align-items: center;
-      min-height: 8vh;
-      background-color:  #f8f8f8;
-      ;;
-      font-family: 'Montserrat', sans-serif;
+    }
+  
+  
+    .about-text,
+    .about-image {
+      flex-basis: 100%;
+    }
   }
   
   
-  .nav-logo {
-      color: #E2F568;;
-      text-transform: uppercase;
-      letter-spacing: 0.25em;
-    font-size: 1.25rem;
+  /* Medios queries para tabletas */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+  
+    .about-text,
+    .about-image {
+      flex-basis: 100%;
+    }
   }
   
-  
-  .nav-links {
-      display: flex;
-      justify-content: space-around;
-      width: 45%;
+  .footer {
+    background-color:var(--light-coffee, #ffffff) ;/* color de fondo del footer */
+    height: 100px; /* altura del footer */
+    width: 100%; /* ancho del footer */
   }
-  
-  
-  .nav-links li {
-      list-style: none;
-  }
-  
-  
-  .nav-links a {
-      color:  #000000;
-      text-decoration: none;
-      letter-spacing: 3px;
-      font-weight: bold;
-      font-size: 14px;
-  }
-  
-  
-  .burger {
-      display: none;
-      cursor: pointer;
-  }
-  
-  
-  .burger div {
-      width: 25px;
-      height: 3px;
-      background-color: #000000;
-      margin: 5px;
-      transition: all 0.3s ease;
-  }
-  
-  
-  @media screen and (max-width: 1024px) {
-     .nav-links {
-          width: 60%;
-      }
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-      body {
-          overflow-x: hidden;
-      }
-     .nav-links {
-          position: absolute;
-          right: 0px;
-          height: 92vh;
-          top: 8vh;
-          background-color: #ffffff;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 50%;
-          transform: translateX(100%);
-          transition: transform 0.5s ease-in;
-      }
-     .burger {
-          display: block;
-      }
-  }
-  
-  
-  .nav-active {
-      transform: translateX(0%);
-  }
-  
-  
-  @media (max-width: 600px) {
-      .nav-logo {
-         text-align: center;
-         margin: 0 auto;
-       }
-     }
-     .about-container {
-        max-width: 800px;
-        margin: 40px auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      
-      
-      .about-text {
-        flex-basis: 60%;
-        padding: 20px;
-      }
-      
-      
-      .about-image {
-        flex-basis: 40%;
-        padding: 20px;
-      }
-      
-      
-      .about-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 0px;
-      }
-      
-      
-      /* Medios queries para dispositivos móviles */
-      @media screen and (max-width: 767px) {
-        .about-container {
-          flex-direction: column;
-          align-items: center;
-        }
-      
-      
-        .about-text,
-        .about-image {
-          flex-basis: 100%;
-        }
-      }
-      
-      
-      /* Medios queries para tabletas */
-      @media screen and (min-width: 768px) and (max-width: 1023px) {
-        .about-container {
-          flex-direction: column;
-          align-items: center;
-        }
-      
-      
-        .about-text,
-        .about-image {
-          flex-basis: 100%;
-        }
-      }
-      
-  
+
