@@ -1,9 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Navbar*/
-
-
 
 body {
     font-family: 'Montserrat';
@@ -14,7 +11,7 @@ body {
     padding: 0 10px;
     display: flex;
     flex-direction: column;}
-  
+/* Navbar*/  
 header {
     background-color: #ffffff;
     padding: 30px 0;
