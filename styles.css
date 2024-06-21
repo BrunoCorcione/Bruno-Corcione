@@ -26,7 +26,7 @@ nav a {
 }
 
 a:hover {
-    color: rgba(247, 237, 129, 0.8);
+    color: rgba(0, 255, 179, 0.796);
   }
 
 /* FONT*/
@@ -46,12 +46,11 @@ h3{
     font-weight: 400;}
 h5{
   font-family: 'Montserrat', sans-serif;
-  color: rgb(43, 43, 43);
     font-style: normal;
     font-weight: 400;}
 p{
   font-family: 'Montserrat', sans-serif;
-    color: rgb(43, 43, 43);
+   
     font-style: normal;
     font-weight: 100;}
 
@@ -79,14 +78,14 @@ body {
     width: 100%;
     aspect-ratio: 1/1;
     overflow: hidden;
-  }
+    border-radius: 10px;}
   
   .grid-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s; /* Add transition for scale up effect */
-  }
+    border-radius: 10px;}
   
   .overlay {
     position: absolute;
@@ -104,16 +103,16 @@ body {
     align-items: center;
     text-align: center;
     transition: background-color 0.3s; /* Add transition for background color change */
-  }
+  border-radius: 10px;}
   
   .grid-item:hover img {
     transform: scale(1.05); /* Scale up on hover, solo en la imagen */
-  }
+    border-radius: 10px;}
   
   .grid-item:hover .overlay {
     display: flex;
-    background-color: rgba(247, 237, 129, 0.8); /* Change background color on hover */
-  }
+    background-color: rgba(0, 255, 179, 0.796); /* Change background color on hover */
+    border-radius: 10px;}
   
   .overlay span {
     opacity: 0;
@@ -138,63 +137,7 @@ body {
     }
   }
 
-/* ABOUT HTML */
-  .about-container {
-    max-width: 800px;
-    margin: 40px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  
-  .about-text {
-    flex-basis: 60%;
-    padding: 20px;
-  }
-  
-  
-  .about-image {
-    flex-basis: 40%;
-    padding: 20px;
-  }
-  
-  
-  .about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 0px;
-  }
-  
-  
-  /* Medios queries para dispositivos móviles */
-  @media screen and (max-width: 767px) {
-    .about-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-  
-    .about-text,
-    .about-image {
-      flex-basis: 100%;
-    }
-  }
-  
-  
-  /* Medios queries para tabletas */
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .about-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-  
-    .about-text,
-    .about-image {
-      flex-basis: 100%;
-    }
-  }
+
   
   .footer {
     background-color:var(--light-coffee, #ffffff) ;/* color de fondo del footer */
@@ -208,28 +151,40 @@ body {
 }
 
 .hero {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-color: #f0f0f0; /* Color de fondo */
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f0f0; /* Color de fondo */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
 }
 
 .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff; /* Color del texto */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; /* Color del texto */
+  z-index: 1; /* Make sure the text is on top of the opacity layer */
 }
+
 
 .gallery {
     display: flex;
@@ -240,4 +195,38 @@ body {
 .gallery img {
     width: 30%; /* Ancho de las imágenes */
     margin: 10px; /* Margen entre imágenes */
+}
+/* styles.css */
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px;
+}
+
+.about-image {
+  flex-basis: 20%;
+  margin: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-text {
+  flex-basis: 40%;
+  margin: 20px;
+}
+
+.about-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
