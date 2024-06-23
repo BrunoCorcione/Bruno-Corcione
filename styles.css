@@ -27,11 +27,12 @@ nav a {
 
 a:hover {
     color: rgba(0, 255, 179, 0.796);
+    cursor: url(img/Bubble-Link.png),auto;
   }
 
 /* FONT*/
 
-h1{font-family: 'Nunito', sans-serif;}
+h1{font-family: 'Montserrat', sans-serif;}
 
 
 h2{
@@ -60,10 +61,13 @@ body {
     font-family: 'Montserrat';
     color: #000000;
     ;background:  #ffffff;
+    cursor: url(img/Bubble-Link.png),auto;
     margin: 0 10px;
     padding: 0 10px;
     display: flex;
-    flex-direction: column;}
+    flex-direction: column;
+  }
+  
   
 
 /* HOME / WORKS */
@@ -112,7 +116,8 @@ body {
   .grid-item:hover .overlay {
     display: flex;
     background-color: rgba(0, 255, 179, 0.796); /* Change background color on hover */
-    border-radius: 10px;}
+    border-radius: 10px;
+    cursor: url(img/Bubble-Link.png),auto;}
   
   .overlay span {
     opacity: 0;
