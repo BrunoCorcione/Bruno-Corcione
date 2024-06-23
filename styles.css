@@ -1,7 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Navbar*/
+
+body {
+    font-family: 'Montserrat';
+    color: #000000;
+    ;background:  #ffffff;
+    cursor: url(img/Bubble-Link.png),auto;
+    margin-left: 20px;
+  margin-right: 20px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;}
+/* Navbar*/  
 header {
     background-color: #ffffff;
     padding: 30px 0;
@@ -17,7 +28,7 @@ nav {
 nav a {
     text-decoration: none;
     color: #000;
-    margin: 0 10px;
+    margin: 0 20px;
     font-weight: bold;
 }
 
@@ -55,20 +66,6 @@ p{
     font-style: normal;
     font-weight: 100;}
 
-
-
-body {
-    font-family: 'Montserrat';
-    color: #000000;
-    ;background:  #ffffff;
-    cursor: url(img/Bubble-Link.png),auto;
-    margin: 0 10px;
-    padding: 0 10px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  
 
 /* HOME / WORKS */
 .grid-container {
